@@ -173,7 +173,7 @@ const AudioUploader = () => {
             AudioScribe 
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Transform your Audio into text or Upload a file for Visualization
+            Click the Record button for Live Transcription or Upload a file for Visualization
             <br />{" "}
             <span className="text-gray-600 dark:text-gray-300">
               (Download Sample Audio Files{" "}
