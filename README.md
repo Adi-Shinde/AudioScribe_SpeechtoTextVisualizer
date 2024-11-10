@@ -1,3 +1,33 @@
+AudioScribe: Speech-to-Text Visualizer
+
+AudioScribe is a web application built to provide real-time audio transcription with a interactive visualizer. It uses Whisper AI models for speech recognition, and integrates with a variety of web technologies.
+
+Technologies Used:
+1. Nextjs
+2. React
+3. Lucide_react
+4. Groq SDK
+5. Whisper AI
+6. Typescript
+7. postCSS
+8. tailwindcss
+
+Features:
+- Real-Time Audio Transcription: Convert speech to text with high accuracy using OpenAI's Whisper AI.
+- Audio Visualizer: Visual representation of the audio waveform during transcription.
+- Responsive UI: Built with Next.js, React, and Tailwind CSS for a modern, mobile-friendly design.
+- Speech-to-Text Integration: Using Whisper AI for accurate and fast transcription.
+- Deployed on Vercel for scalable and efficient hosting 
+
+To get started with AudioScribe, follow the instructions below to clone the repository and run the application locally.
+
+Prerequisites
+Make sure you have the following tools installed:
+
+Node.js
+Yarn or npm (depending on your preference)
+Git
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
