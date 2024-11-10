@@ -4,6 +4,8 @@
     "@typescript-eslint/no-require-imports": "off",  // Disable the require() rule
     "@typescript-eslint/no-explicit-any": "off",     // Allow the use of any type
     "react-hooks/exhaustive-deps": "off",            // Disable exhaustive-deps warnings (if needed)
-    "react/no-unescaped-entities": "off"             // Disable the no-unescaped-entities rule if needed
+    "react/no-unescaped-entities": "off",            // Disable the no-unescaped-entities rule
+    "@typescript-eslint/no-unused-vars": "warn",     // Warn for unused variables instead of throwing an error
+    "react/prop-types": "off"                        // Turn off prop-types rule (optional, if you don't use PropTypes)
   }
 }
