@@ -33,8 +33,9 @@ export async function POST(request: NextRequest) {
     // Write the buffer to temp file
     await writeFile(tempFilePath, buffer);
 
+    // Initialize the Groq client with the API key
     const groq = new Groq({
-      apiKey: process.env.GROQ_API_KEY, // Make sure this is the correct variable name
+      apiKey: process.env.GROQ_API_KEY,  // This should be correct if the environment variable is loaded properly
     });
 
     const transcription = await groq.audio.transcriptions.create({
@@ -50,7 +51,7 @@ export async function POST(request: NextRequest) {
       await unlink(tempFilePath);
     }
 
-    return NextResponse.json(transcription); // Fixed variable name here
+    return NextResponse.json(transcription); // Return the transcription result
   } catch (error) {
     console.error("Transcription Error:", error);
 
