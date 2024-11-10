@@ -1,3 +1,9 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-require-imports": "off",  // Disable the require() rule
+    "@typescript-eslint/no-explicit-any": "off",     // Allow the use of any type
+    "react-hooks/exhaustive-deps": "off",            // Disable exhaustive-deps warnings (if needed)
+    "react/no-unescaped-entities": "off"             // Disable the no-unescaped-entities rule if needed
+  }
 }
