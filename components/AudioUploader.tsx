@@ -192,10 +192,11 @@ return (
       <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 w-11/12 max-w-lg shadow-lg transform transition-transform duration-300">
           <h2 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 text-center">
-            Sorry, Mobile Support is Limited. Use a Laptop/PC to view this page.
+          Limited Mobile Support
           </h2>
           <p className="mt-4 text-gray-700 dark:text-gray-300 text-center">
-            This current version of AudioScribe on mobile devices has limitations to recording and transcribing Live Voice however File Upload works perfectly. 
+          For the best experience, please use a laptop or PC. 
+          Due to technical limitations with the current code and Groq SDK, live voice transcription will not work on mobile, but file uploads function perfectly.
           </p>
           <button
             onClick={() => setIsMobileModalVisible(false)} // Close modal on button click
