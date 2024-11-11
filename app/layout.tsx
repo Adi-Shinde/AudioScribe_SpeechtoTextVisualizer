@@ -1,4 +1,4 @@
-// app/layout.tsx
+// app/layout.tsx or app/layout.js
 
 import SocialLinks from "../components/SocialLinks"; // Import the SocialLinks component
 import { Metadata } from "next";
@@ -29,11 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Link to the sound.png as Favicon */}
         <link rel="icon" href="/sound.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Add the SocialLinks component */}
         <SocialLinks />
         {children}
       </body>
