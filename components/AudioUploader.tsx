@@ -6,7 +6,13 @@ import AudioVisualizer from "./AudioVisualizer";
 import { useHasBrowser } from "../lib/useHasBrowser";
 
 const ALLOWED_TYPES = ["audio/mpeg", "audio/wav", "audio/x-m4a", "audio/mp4"];
-const isMobileDevice = () => /Android|iPhone|iPad|iPod/i.test(navigator.userAgent); // Detect mobile devices
+
+const isMobileOrTabletDevice = () => {
+  const userAgent = navigator.userAgent;
+  const isMobileOrTablet = /Android|iPhone|iPad|iPod|Tablet|Mobile/i.test(userAgent);
+  const isSmallScreen = window.innerWidth <= 1280; // Common threshold for tablet/phone sizes
+  return isMobileOrTablet || isSmallScreen;
+};
 
 const AudioUploader = () => {
   const hasBrowser = useHasBrowser();
@@ -24,8 +30,8 @@ const AudioUploader = () => {
   const recognitionRef = useRef<any>(null);
 
   useEffect(() => {
-    if (isMobileDevice()) {
-      setIsMobileModalVisible(true); // Show modal if the device is mobile
+    if (isMobileOrTabletDevice()) {
+      setIsMobileModalVisible(true); // Show modal if the device is mobile or tablet
     }
   }, []);
 
@@ -181,7 +187,7 @@ const AudioUploader = () => {
 
 return (
   <div className="min-h-screen bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/80 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-950 p-6 relative">
-    {/* Mobile Modal */}
+    {/* Mobile/tablet Modal */}
     {isMobileModalVisible && (
       <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 w-11/12 max-w-lg shadow-lg transform transition-transform duration-300">
