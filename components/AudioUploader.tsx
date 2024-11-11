@@ -195,7 +195,7 @@ return (
           Limited Mobile Support
           </h2>
           <p className="mt-4 text-gray-700 dark:text-gray-300 text-center">
-          For the best experience, please use a laptop or PC. <br />Due to technical limitations with the current code and Groq SDK, live voice transcription will not work on mobile, but file uploads function perfectly.
+          For the best experience, please use a laptop or PC. <br /><br />Due to technical limitations with the current code and Groq SDK, live voice transcription will not work on mobile, but file uploads function perfectly.
           </p>
           <button
             onClick={() => setIsMobileModalVisible(false)} // Close modal on button click
