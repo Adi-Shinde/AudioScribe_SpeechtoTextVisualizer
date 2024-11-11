@@ -33,6 +33,11 @@ const AudioUploader = () => {
 
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
+    if (!SpeechRecognition) {
+      alert("Speech recognition is not supported in this browser.");
+      return;  // Stop the execution if SpeechRecognition is not available
+    }
+
     if (SpeechRecognition) {
       const recognition = new SpeechRecognition();
       recognition.continuous = true;
@@ -114,8 +119,9 @@ const AudioUploader = () => {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         setMediaStream(stream);
         recognitionRef.current.start();
-        setTranscription(" ");
+        
         setIsRecording(true);
+        setTranscription(" ");
         
       } catch (error) {
         console.error("Error accessing microphone:", error);
