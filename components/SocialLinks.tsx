@@ -1,43 +1,48 @@
-import React from 'react';
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'; // Make sure to install react-icons package
+import React from "react";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
-const Header: React.FC = () => {
+const SocialLinks: React.FC = () => {
   return (
-    <div className="fixed top-4 right-4 hidden md:flex items-center space-x-5 bg-gray-800 p-4 rounded-lg shadow-lg">
-      {/* LinkedIn Icon */}
-      <a
-        href="https://www.linkedin.com/in/adityapshinde/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-white hover:text-blue-500"
-      >
-        <FaLinkedin className="h-8 w-8" /> {/* Larger icon size */}
-      </a>
+    <div className="flex items-center space-x-6 bg-gray-900 p-4 rounded-lg shadow-lg border border-gray-700 transition duration-300 ease-in-out hover:bg-gray-800">
+      <div className="flex flex-col items-center">
+        <a
+          href="https://www.linkedin.com/in/adityapshinde/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:text-gray-300 transition duration-300 transform hover:scale-110"
+        >
+          <FaLinkedin className="h-8 w-8 mb-1" />
+        </a>
+        <span className="text-white text-xs">LinkedIn</span>
+      </div>
 
-      {/* GitHub Icon */}
-      <a
-        href="https://github.com/Adi-Shinde/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-white hover:text-gray-400"
-      >
-        <FaGithub className="h-8 w-8" /> {/* Larger icon size */}
-      </a>
+      <div className="flex flex-col items-center">
+        <a
+          href="https://github.com/Adi-Shinde/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-yellow-200 hover:text-gray-400 transition duration-300 transform hover:scale-110"
+        >
+          <FaGithub className="h-8 w-8 mb-1" />
+        </a>
+        <span className="text-white text-xs">GitHub</span>
+      </div>
 
-      {/* Instagram Icon */}
-      <a
-        href="https://instagram.com/adiii._.004"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-white hover:text-pink-500"
-      >
-        <FaInstagram className="h-8 w-8" /> {/* Larger icon size */}
-      </a>
+      <div className="flex flex-col items-center">
+        <a
+          href="https://instagram.com/adiii._.004"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-400 hover:text-gray-300 transition duration-300 transform hover:scale-110"
+        >
+          <FaInstagram className="h-8 w-8 mb-1" />
+        </a>
+        <span className="text-white text-xs">Instagram</span>
+      </div>
 
-      {/* User Name */}
-      <span className="text-white text-lg font-medium ml-3">Aditya Shinde</span> {/* Larger font size */}
+      <span className="text-white text-lg font-semibold">Aditya Shinde</span>
     </div>
   );
 };
 
-export default Header;
+export default SocialLinks;

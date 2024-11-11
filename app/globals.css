@@ -1,3 +1,4 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,9 +12,9 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 210 100% 50%; /* Updated to blue */
+    --primary: 210 100% 50%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 120 60% 40%; /* Updated to green */
+    --secondary: 120 60% 40%;
     --secondary-foreground: 210 40% 98%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
