@@ -114,8 +114,9 @@ const AudioUploader = () => {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         setMediaStream(stream);
         recognitionRef.current.start();
+        setTranscription(" ");
         setIsRecording(true);
-        setTranscription("");
+        
       } catch (error) {
         console.error("Error accessing microphone:", error);
         setError("Microphone access denied or not available.");
